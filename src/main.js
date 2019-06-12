@@ -16,7 +16,9 @@ import app from "./App.vue"
 var vm = new Vue({
     el:"#app",
     data:{
-
+        
+// git remote add origin https://gitee.com/platonic/vue-shoping.git 这一步是连接上远程仓库
+// git push -u origin master
     },
     render:c=>c(app),
     router
