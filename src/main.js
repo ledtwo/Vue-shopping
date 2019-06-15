@@ -9,9 +9,9 @@ import router from "./router.js"
 import {Header} from "mint-ui"
 Vue.component(Header.name,Header)
 import "./lib/css/mui.min.css"
+import "./lib/css/icons-extra.css"
 
 import app from "./App.vue"
-
 
 var vm = new Vue({
     el:"#app",
