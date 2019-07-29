@@ -12,6 +12,8 @@ Vue.component(Swipe.name,Swipe)
 Vue.component(SwipeItem.name,SwipeItem)
 import VueResource from "vue-resource"
 Vue.use(VueResource)
+Vue.http.options.root = "http://www.liulongbin.top:3005"
+
 import "./lib/css/mui.min.css"
 import "./lib/css/icons-extra.css"
 

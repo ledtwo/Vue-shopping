@@ -3,7 +3,11 @@
     <!-- 完成Header区域 使用mint-ui -->
     <mt-header fixed title="龙与少年游"></mt-header>
     <!-- <h3>偶然遇到的一句话，却像梦呓</h3> -->
-    <router-view></router-view>
+
+    <transition>
+        <router-view></router-view>
+    </transition>
+
 
     <!-- 制作底部的tab-bar -->
     <!-- 制作图标的过程： 首先导入css 在导入ttf字体 之后用正确的类名解决导入问题 -->
@@ -42,10 +46,25 @@ export default {
 };
 </script>
 <style scoped>
+.v-enter{
+  opacity: 0;
+  transform: translateX(100%)
+}
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active{
+  transition: all 0.5s ease
+}
+
 #header {
   background-color: rgb(92, 167, 186);
 }
 #app-container{
-  padding-top: 40px
+  padding-top: 40px;
+  overflow-x:hidden 
 }
 </style>
