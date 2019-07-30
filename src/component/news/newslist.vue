@@ -2,16 +2,16 @@
     <div>
         <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media" v-for="news in newsList" :key="news.id">
-					<a href="javascript:;">
+					<router-link :to="'/home/newsinfo/' + news.id"> <!-- //使用属性表达式  :to --> 
 						<img class="mui-media-object mui-pull-left" :src="news.img_url">
 						<div class="mui-media-body">
 							<h1>{{news.title}}</h1>
 							<p class='mui-ellipsis'>
-                                <span>发表时间：{{news.add_time}}</span>
-                                <span>点击次数：{{news.click}}</span>
+                                <span>发表时间：{{news.add_time | dataFormat("YYYY-MM-DD HH:mm")}}</span>
+                                <span>浏览量：{{news.click}}</span>
                             </p>
 						</div>
-					</a>
+					</router-link>
 				</li>
 
 			</ul>

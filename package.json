@@ -38,6 +38,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "mint-ui": "^2.2.13",
+    "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.6"

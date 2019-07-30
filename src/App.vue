@@ -21,7 +21,7 @@
         </span>
         <span class="mui-tab-label">会员</span> 
       </router-link>
-      <router-link class="mui-tab-item" to="shopcar">
+      <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
           <span class="mui-badge">6</span>
         </span>
@@ -65,6 +65,7 @@ export default {
 }
 #app-container{
   padding-top: 40px;
+  padding-bottom:50px;
   overflow-x:hidden 
 }
 </style>

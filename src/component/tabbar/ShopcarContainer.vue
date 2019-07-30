@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>????€?</h3>
+        <h3>where is my car</h3>
     </div>
 </template>
 <script>
