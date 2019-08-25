@@ -1,13 +1,16 @@
 <template>
   <div id="app-container">
     <!-- 完成Header区域 使用mint-ui -->
-    <mt-header fixed title="龙与少年游"></mt-header>
+    <mt-header fixed title="解忧杂货铺">
+      <router-link to="/" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <!-- <h3>偶然遇到的一句话，却像梦呓</h3> -->
 
     <transition>
-        <router-view></router-view>
+      <router-view></router-view>
     </transition>
-
 
     <!-- 制作底部的tab-bar -->
     <!-- 制作图标的过程： 首先导入css 在导入ttf字体 之后用正确的类名解决导入问题 -->
@@ -17,9 +20,8 @@
         <span class="mui-tab-label">首页</span>
       </router-link>
       <router-link class="mui-tab-item-L" to="/member">
-        <span class="mui-icon mui-icon-contact">
-        </span>
-        <span class="mui-tab-label">会员</span> 
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">会员</span>
       </router-link>
       <router-link class="mui-tab-item-L" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
@@ -46,60 +48,59 @@ export default {
 };
 </script>
 <style scoped>
-.v-enter{
+.v-enter {
   opacity: 0;
-  transform: translateX(100%)
+  transform: translateX(100%);
 }
-.v-leave-to{
+.v-leave-to {
   opacity: 0;
   transform: translateX(-100%);
   position: absolute;
 }
 .v-enter-active,
-.v-leave-active{
-  transition: all 0.5s ease
+.v-leave-active {
+  transition: all 0.5s ease;
 }
 
 #header {
   background-color: rgb(92, 167, 186);
 }
-#app-container{
+#app-container {
   padding-top: 40px;
-  padding-bottom:50px;
-  overflow-x:hidden 
+  padding-bottom: 50px;
+  overflow-x: hidden;
 }
-
 
 .mui-bar-tab .mui-tab-item-L.mui-active {
-    color: #007aff;
+  color: #007aff;
 }
 .mui-bar-tab .mui-tab-item-L {
-    display: table-cell;
-    overflow: hidden;
-    width: 1%;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #929292;
+  display: table-cell;
+  overflow: hidden;
+  width: 1%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #929292;
 }
 .mui-bar-tab .mui-tab-item-L .mui-icon {
-    top: 3px;
-    width: 24px;
-    height: 24px;
-    padding-top: 0;
-    padding-bottom: 0;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.mui-bar-tab .mui-tab-item-L .mui-icon~.mui-tab-label {
-    font-size: 11px;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.mui-bar-tab .mui-tab-item-L .mui-icon ~ .mui-tab-label {
+  font-size: 11px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 增加层级 */
-.mint-header{
+.mint-header {
   z-index: 999;
 }
 </style>

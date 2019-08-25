@@ -19,6 +19,9 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
+// 引入 图片预览插件
+import VuePreview from "vue-preview"
+Vue.use(VuePreview)
 
 import VueResource from "vue-resource"
 Vue.use(VueResource)
@@ -30,6 +33,7 @@ import moment from "moment"
 Vue.filter("dataFormat",function(dataStr,pattern = "YYYY-MM-DD HH:mm:ss"){//pattern 代表默认的格式化时间格式
     return moment(dataStr).format(pattern)
 })
+
 
 import "./lib/css/mui.min.css"
 import "./lib/css/icons-extra.css"
