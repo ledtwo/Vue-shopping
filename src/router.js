@@ -10,6 +10,7 @@ import newslist from "./component/news/newslist.vue"
 import newsinfo from "./component/news/newsinfo.vue"
 import photosList from "./component/photos/photosList.vue"
 import photosInfo from "./component/photos/photosInfo.vue"
+import goodsList from "./component/goods/goodsList.vue"
 
 // 4.创建路由对象
 const router = new VueRouter({
@@ -23,7 +24,8 @@ const router = new VueRouter({
         // 匹配符 :id 是个参数
         {path:"/home/newsinfo/:id",component:newsinfo},
         {path:"/home/photosList",component:photosList},
-        {path:"/home/photosInfo/:id",component:photosInfo}
+        {path:"/home/photosInfo/:id",component:photosInfo},
+        {path:"/home/goodslist",component:goodsList}
 
     ],
     linkActiveClass:"mui-active"

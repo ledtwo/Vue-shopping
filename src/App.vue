@@ -2,8 +2,8 @@
   <div id="app-container">
     <!-- 完成Header区域 使用mint-ui -->
     <mt-header fixed title="解忧杂货铺">
-      <router-link to="/" slot="left">
-        <mt-button icon="back">返回</mt-button>
+      <router-link to="/" slot="left" v-if="home">
+        <mt-button icon="back">首页</mt-button>
       </router-link>
     </mt-header>
     <!-- <h3>偶然遇到的一句话，却像梦呓</h3> -->
@@ -41,10 +41,28 @@ export default {
   data() {
     return {
       msg: "nice",
-      warn: "冲啊，热血的战士们~"
+      warn: "冲啊，热血的战士们~",
+      home:true,
     };
   },
-  methods: {}
+  methods: {
+    getRoute(){
+      if(this.$route.path=="/home"){
+        this.home = false
+      }else{
+        this.home = true
+      }
+    }
+  },
+  watch:{
+    $route(to,from){
+      // console.log(to+"  "+from)
+      this.getRoute()
+    }
+  },
+  created(){
+     this.getRoute()
+  }
 };
 </script>
 <style scoped>
