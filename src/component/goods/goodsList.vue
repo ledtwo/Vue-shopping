@@ -9,7 +9,7 @@
                 <h3 class="item-title">"苹果Apple iPhone 6 Plus 16G 4G手机（联通三网版）"</h3>
             </div>
         </div>
-    </div>
+    </div> 
 </template>
 <script>
 export default {
